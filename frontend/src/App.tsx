@@ -38,7 +38,6 @@ export default function App() {
         </nav>
       </header>
 
-      {/* Área Principal - Limpa, sem overflow-y-auto e sem bg-gray! */}
       <main className="layout-content">
         {abaAtiva === 'pessoas' && <PainelPessoas />}
         {abaAtiva === 'transacoes' && <PainelTransacoes />}

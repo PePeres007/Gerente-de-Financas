@@ -151,7 +151,7 @@
 
 /* Efeito ao passar o mouse no botão inativo */
 .btn-nav:hover {
-  background-color: rgba(35, 61, 29, 0.1); /* Fundo verde levemente transparente */
+  background-color: rgba(35, 61, 29, 0.1); 
   color: #ffffff;
 }
 
@@ -160,9 +160,9 @@
   padding: 0.5rem 1.25rem;
   border-radius: 0.5rem;
   font-weight: 800;
-  background-color: var(--color-fin-600); /* Fundo Bege da paleta */
-  color: var(--color-fin-700); /* Letra em Verde Escuro */
-  border: 2px solid var(--color-fin-600); /* Borda da mesma cor para manter a estrutura geométrica */
+  background-color: var(--color-fin-600); 
+  color: var(--color-fin-700); 
+  border: 2px solid var(--color-fin-600); 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: default;
 }
@@ -387,5 +387,5 @@
   width: 1rem;
   height: 1rem;
   cursor: pointer;
-  accent-color: var(--color-fin-300); /* Pinta o checkbox preenchido com a cor primária */
+  accent-color: var(--color-fin-300); 
 }

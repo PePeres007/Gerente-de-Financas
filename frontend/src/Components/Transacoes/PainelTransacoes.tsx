@@ -26,10 +26,6 @@ export default function PainelTransacoes() {
         </button>
       </header>
 
-      {/* 
-        O "bento-card-large" foi removido daqui! 
-        Agora, a Lista e o Formulário vão gerenciar seus próprios cards.
-      */}
       {exibindoCadastro ? (
         <FormularioTransacao />
       ) : (
