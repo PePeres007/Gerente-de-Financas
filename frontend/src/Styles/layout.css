@@ -1,0 +1,43 @@
+/* Container principal (Coluna padrão, empurrando conteúdo para baixo) */
+.layout-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-header {
+  width: 100%;
+  background-color: #0f172a; /* bg-slate-900 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Área de navegação dentro do Header */
+.layout-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Título ajustado para o Header */
+.layout-header-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.025em;
+}
+
+/* Área central de renderização das páginas */
+.layout-content {
+  flex: 1 1 0%;
+  padding: 2rem;
+  background-color: #f4f6f4;
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: auto;
+}

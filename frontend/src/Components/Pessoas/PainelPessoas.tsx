@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import FormularioPessoa from './FormularioPessoa';
 import ListaPessoas from './ListaPessoas';
 
@@ -6,14 +6,14 @@ export default function PainelPessoas() {
   const [exibindoCadastro, setExibindoCadastro] = useState(false);
 
   return (
-    <div className="flex flex-col gap-8 animate-fade-in">
+    <div className="painel-container">
       
-      <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <header className="painel-header">
         <div>
-          <h1 className="text-3xl font-extrabold text-fin-400 tracking-tight">
+          <h1 className="painel-title">
             Gestão de Pessoas
           </h1>
-          <p className="text-fin-200/80 font-medium mt-1">
+          <p className="painel-subtitle">
             Administre os clientes e usuários do seu sistema.
           </p>
         </div>
@@ -26,7 +26,7 @@ export default function PainelPessoas() {
         </button>
       </header>
 
-      <main className="bento-card min-h-[400px]">
+      <main className="bento-card-large">
         {exibindoCadastro ? (
           <FormularioPessoa />
         ) : (

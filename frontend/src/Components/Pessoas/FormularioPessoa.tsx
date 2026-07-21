@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { api } from '../../Services/Api';
 
 export default function FormularioPessoa() {
-  // Requisitos do banco de dados
   const [nome, setNome] = useState('');
   const [idade, setIdade] = useState('');
 
@@ -10,8 +9,6 @@ export default function FormularioPessoa() {
     e.preventDefault();
     
     try {
-      // Fazendo a requisição POST para o backend
-      // Convertendo a idade para número inteiro para casar com o tipo "int" do C#
       await api.post('/pessoas', {
         nome: nome,
         idade: parseInt(idade, 10) 
@@ -19,7 +16,6 @@ export default function FormularioPessoa() {
       
       alert('Pessoa cadastrada com sucesso!');
       
-      // Limpa os campos
       setNome('');
       setIdade('');
     } catch (error) {
@@ -29,14 +25,12 @@ export default function FormularioPessoa() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="text-left animate-fade-in">
-      <h2 className="text-2xl font-bold text-fin-300 mb-6">Nova Pessoa</h2>
+    <form onSubmit={handleSubmit} className="form-container">
+      <h2 className="form-title">Nova Pessoa</h2>
       
-      {/* Grid responsivo adaptado para 2 campos */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div className="form-grid">
         
-        {/* Campo Nome */}
-        <div className="md:col-span-1">
+        <div className="grupo-form">
           <label className="label-padrao" htmlFor="nome">Nome Completo</label>
           <input 
             type="text" 
@@ -49,8 +43,7 @@ export default function FormularioPessoa() {
           />
         </div>
 
-        {/* Campo Idade */}
-        <div className="md:col-span-1">
+        <div className="grupo-form">
           <label className="label-padrao" htmlFor="idade">Idade</label>
           <input 
             type="number" 
@@ -66,7 +59,7 @@ export default function FormularioPessoa() {
 
       </div>
 
-      <div className="flex justify-end gap-4 border-t border-fin-100/20 pt-6">
+      <div className="form-actions">
         <button 
           type="button" 
           className="btn-secundario"

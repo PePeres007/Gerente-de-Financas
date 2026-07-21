@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import FormularioTransacao from '../Transacoes/FormularioTransacoes';
-import ListaTransacoes from '../Transacoes/ListaTransacoes';
+import { useState } from 'react';
+import FormularioTransacao from './FormularioTransacoes';
+import ListaTransacoes from './ListaTransacoes';
 
 export default function PainelTransacoes() {
   const [exibindoCadastro, setExibindoCadastro] = useState(false);
 
   return (
-    <div className="flex flex-col gap-8 animate-fade-in">
+    <div className="painel-container">
       
-      <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <header className="painel-header">
         <div>
-          <h1 className="text-3xl font-extrabold text-fin-400 tracking-tight">
+          <h1 className="painel-title">
             Transações Financeiras
           </h1>
-          <p className="text-fin-200/80 font-medium mt-1">
+          <p className="painel-subtitle">
             Controle as receitas e despesas vinculadas aos usuários.
           </p>
         </div>
@@ -26,7 +26,7 @@ export default function PainelTransacoes() {
         </button>
       </header>
 
-      <main className="bento-card min-h-[400px]">
+      <main className="bento-card-large">
         {exibindoCadastro ? (
           <FormularioTransacao />
         ) : (

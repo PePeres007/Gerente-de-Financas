@@ -1,0 +1,45 @@
+/*
+   ESTILOS ESPECÍFICOS: TRANSAÇÕES
+*/
+
+/* Título de listagens que não estão dentro do card principal */
+.lista-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-fin-300);
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+/* Célula formatada para exibir valores monetários em destaque */
+.tabela-celula-valor {
+  padding: 1rem;
+  border-bottom: 1px solid #f9fafb;
+  text-align: left;
+  font-weight: 700;
+}
+
+/* Célula padrão, mas com conteúdo alinhado ao centro (ex: coluna de botões) */
+.tabela-celula-centro {
+  padding: 1rem;
+  border-bottom: 1px solid #f9fafb;
+  text-align: center;
+}
+
+/* Cores condicionais para transações financeiras */
+.texto-receita {
+  color: #16a34a; 
+}
+
+.texto-despesa {
+  color: #ef4444; 
+}
+
+/* Mensagem de alerta abaixo de inputs (ex: regra de menor de idade) */
+.msg-alerta-erro {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #ef4444;
+  margin-top: 0.25rem;
+}

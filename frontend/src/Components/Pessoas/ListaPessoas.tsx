@@ -40,7 +40,6 @@ export default function ListaPessoas() {
       try {
         await api.delete(`/pessoas/${id}`);
         alert('Registro excluído com sucesso.');
-        // Atualiza a tabela chamando a API novamente
         carregarPessoas();
       } catch (erro) {
         console.error("Erro ao excluir:", erro);
@@ -50,43 +49,40 @@ export default function ListaPessoas() {
   };
 
   if (carregando) {
-    return <div className="text-center text-fin-300 p-8 font-medium animate-pulse">Carregando dados...</div>;
+    return <div className="loading-texto">Carregando dados...</div>;
   }
 
   return (
-    <div className="animate-fade-in">
-      <h2 className="text-xl font-bold text-fin-300 mb-6">Pessoas Cadastradas</h2>
+    <div className="lista-container">
+      <h2 className="bento-title mb-6">Pessoas Cadastradas</h2>
       
-      <div className="overflow-x-auto">
-        <table className="w-full text-left border-collapse">
+      <div className="tabela-wrapper">
+        <table className="tabela-padrao">
           <thead>
-            <tr className="border-b-2 border-fin-100/20 text-fin-400">
-              <th className="p-3 font-semibold">ID</th>
-              <th className="p-3 font-semibold">Nome</th>
-              <th className="p-3 font-semibold">Idade</th>
-              <th className="p-3 font-semibold text-center">Ações</th>
+            <tr className="tabela-linha-cabecalho">
+              <th className="tabela-cabecalho">ID</th>
+              <th className="tabela-cabecalho">Nome</th>
+              <th className="tabela-cabecalho">Idade</th>
+              <th className="tabela-cabecalho-centro">Ações</th>
             </tr>
           </thead>
           <tbody>
             {pessoas.length === 0 ? (
               <tr>
-                <td colSpan={4} className="p-6 text-center text-fin-200 font-medium">
+                <td colSpan={4} className="tabela-celula-vazia">
                   Nenhuma pessoa cadastrada ainda.
                 </td>
               </tr>
             ) : (
               pessoas.map((pessoa) => (
-                <tr 
-                  key={pessoa.id} 
-                  className="border-b border-fin-100/10 hover:bg-fin-100/5 transition-colors"
-                >
-                  <td className="p-3 text-fin-300 font-medium">#{pessoa.id}</td>
-                  <td className="p-3 text-fin-400 font-semibold">{pessoa.nome}</td>
-                  <td className="p-3 text-fin-300">{pessoa.idade} anos</td>
-                  <td className="p-3 text-center">
+                <tr key={pessoa.id} className="tabela-linha">
+                  <td className="tabela-celula font-medium text-fin-300">#{pessoa.id}</td>
+                  <td className="tabela-celula-destaque">{pessoa.nome}</td>
+                  <td className="tabela-celula text-fin-300">{pessoa.idade} anos</td>
+                  <td className="tabela-celula text-center">
                     <button 
                       onClick={() => handleDelete(pessoa.id, pessoa.nome)}
-                      className="text-red-500 hover:text-white hover:bg-red-500 px-3 py-1 rounded-lg text-sm font-semibold transition-all duration-300"
+                      className="btn-excluir"
                     >
                       Excluir
                     </button>
