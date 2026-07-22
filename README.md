@@ -81,20 +81,22 @@ Para executar o Gerenciador Financeiro no seu ambiente local, siga os passos aba
     git clone [https://github.com/SeuUsuario/gerenciador-financeiro.git](https://github.com/SeuUsuario/gerenciador-financeiro.git)
     ```
 
-2.  **Instale as dependências do projeto (De preferencia pelo Vs code):**
+2.  **Instale as dependências do projeto :**
     ```bash
     cd gerenciador-financeiro
     npm install
     ```
 
 3.  **Execute a aplicação:**
-    Inicie a Api, de preferencia no Visual studio, localmente na sua maquina.
+    Inicie a Api localmente na sua maquina.
     ```
-    Mude para o visual studio, abra o projeto da Api e rode o projeto clicando F5 ou no botão.
+    cd backend
+    cd GerenteFinanceiro.API
+    dotnet run --launch-profile "https"
     ```
 
 4.  **Execute a aplicação:**
-    Volte para o Vs code, ntre na pasta do frontend e inicie o servidor de desenvolvimento do Vite.
+    Abra outro terminal, entre na pasta do frontend e inicie o servidor de desenvolvimento do Vite.
     ```bash
     cd frontend
     npm run dev
