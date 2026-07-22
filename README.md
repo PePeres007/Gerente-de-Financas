@@ -65,12 +65,6 @@ Com uma interface gráfica inspirada em grandes *fintechs* (utilizando uma palet
 
 ---
 
-## 🖥️ Interface Gráfica do Projeto no Figma:
-
-(Insira o link do seu Figma aqui)
-
----
-
 ## ⚙️ Instalação e Execução
 
 Para executar o Gerenciador Financeiro no seu ambiente local, siga os passos abaixo.
@@ -87,7 +81,7 @@ Para executar o Gerenciador Financeiro no seu ambiente local, siga os passos aba
     git clone [https://github.com/SeuUsuario/gerenciador-financeiro.git](https://github.com/SeuUsuario/gerenciador-financeiro.git)
     ```
 
-2.  **Instale as dependências do projeto:**
+2.  **Instale as dependências do projeto (De preferencia pelo Vs code):**
     ```bash
     cd gerenciador-financeiro
     npm install
@@ -96,11 +90,11 @@ Para executar o Gerenciador Financeiro no seu ambiente local, siga os passos aba
 3.  **Execute a aplicação:**
     Inicie a Api, de preferencia no Visual studio, localmente na sua maquina.
     ```
-    entre no visual studio, abra o projeto da Api e rode o projeto clicando F5 ou no botão.
+    Mude para o visual studio, abra o projeto da Api e rode o projeto clicando F5 ou no botão.
     ```
 
 4.  **Execute a aplicação:**
-    Entre na pasta do frontend e inicie o servidor de desenvolvimento do Vite.
+    Volte para o Vs code, ntre na pasta do frontend e inicie o servidor de desenvolvimento do Vite.
     ```bash
     cd frontend
     npm run dev
