@@ -6,10 +6,6 @@ O Gerenciador Financeiro é uma plataforma web moderna para o controle de fluxo 
 # Gerenciador Financeiro 💸
 
 <p align="center">
-  <img src="https://via.placeholder.com/400x150/231536/FFFFFF?text=Gerenciador+Financeiro" width="400" alt="Gerenciador Financeiro Logo">
-</p>
-
-<p align="center">
   <strong>Uma solução web para a gestão completa do ciclo financeiro, desde os lançamentos até a consolidação de relatórios.</strong>
   <br><br>
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
@@ -98,12 +94,19 @@ Para executar o Gerenciador Financeiro no seu ambiente local, siga os passos aba
     ```
 
 3.  **Execute a aplicação:**
-    Inicie o servidor de desenvolvimento do Vite.
+    Inicie a Api, de preferencia no Visual studio, localmente na sua maquina.
+    ```
+    entre no visual studio, abra o projeto da Api e rode o projeto clicando F5 ou no botão.
+    ```
+
+4.  **Execute a aplicação:**
+    Entre na pasta do frontend e inicie o servidor de desenvolvimento do Vite.
     ```bash
+    cd frontend
     npm run dev
     ```
 
-4.  **Acesse no Navegador:**
+5.  **Acesse no Navegador:**
     O terminal exibirá a URL local (geralmente `http://localhost:5173`). Abra este link para utilizar a aplicação.
 
 ---
